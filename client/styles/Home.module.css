@@ -1,0 +1,191 @@
+/* Start Hero */
+.hero {
+  position: relative;
+  display: grid;
+  place-content: center;
+  min-height: calc(100vh - 112px);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 480px;
+  text-shadow: 2px 2px 4px var(--c-neutral-900);
+}
+.heroContent h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: var(--c-neutral-50);
+  text-transform: none;
+}
+.heroContent h1 span {
+  color: var(--c-primary-600);
+  text-decoration: underline;
+}
+.heroContent h2 {
+  color: var(--c-neutral-100);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.heroContent h2 span {
+  color: var(--c-primary-600);
+}
+.heroContent a {
+  padding: 0.75rem 1rem;
+  font-size: var(--font-s);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-neutral-50);
+  background: var(--c-primary-600);
+  border-radius: 4px;
+  text-shadow: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.heroContent a:hover {
+  background-color: var(--c-primary-700);
+}
+/* End Hero */
+/* Start Cars */
+.listings {
+  padding: var(--section-p);
+  color: var(--c-neutral-900);
+}
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+.btn {
+  display: grid;
+  place-content: center;
+  margin-top: 2rem;
+}
+.btn > a {
+  padding: 0.75rem 1rem;
+  font-size: var(--font-s);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-neutral-50);
+  background: var(--c-primary-600);
+  border-radius: 4px;
+  text-shadow: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn > a:hover {
+  background-color: var(--c-primary-700);
+}
+/* End Cars */
+/* Start Services */
+.services {
+  padding: var(--section-p);
+}
+.services .servicesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--c-neutral-50);
+}
+.services .servicesContainer a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 0 0 calc(50% - 1rem);
+  height: 24rem;
+  padding: 1rem;
+  background-color: var(--c-secondary-700);
+  border-radius: 15px;
+}
+.services .servicesContainer a:where(:first-child, :last-child) {
+  background-color: var(--c-primary-600);
+}
+@media (max-width: 767px) {
+  .services .servicesContainer a:nth-child(3) {
+    order: 3;
+  }
+}
+.services .servicesContainer a ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.25rem;
+}
+.services .servicesContainer a ul li::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../public/check-circle-orange.svg");
+  background-size: cover;
+}
+.services .servicesContainer a:where(:first-child, :last-child) ul li::before {
+  background-image: url("../public/check-circle-green.svg");
+}
+.services .servicesContainer a > div {
+  width: 100%;
+  text-align: center;
+}
+.services .servicesContainer a button {
+  background: none;
+  font-size: var(--font-s);
+  font-weight: 600;
+  min-height: 56px;
+  padding: 1rem 1.5rem;
+  touch-action: manipulation;
+  width: fit-content;
+  color: var(--c-neutral-50);
+  border: 2px solid var(--c-primary-600);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+.services .servicesContainer a button:hover {
+  background-color: var(--c-primary-600);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.services .servicesContainer a:where(:first-child, :last-child) button {
+  border-color: var(--c-secondary-700);
+}
+.services .servicesContainer a:where(:first-child, :last-child) button:hover {
+  background-color: var(--c-secondary-700);
+}
+@media (max-width: 767px) {
+  .services .servicesContainer a {
+    flex: 0 0 100%;
+  }
+}
+/* End Services */
+/* Start Reviews */
+.reviews {
+  padding: var(--section-p);
+}
+.reviews .reviewsContainer {
+  position: relative;
+}
+.reviews .reviewsContainer > div > div {
+  color: var(--c-neutral-50);
+}
+.reviews .reviewsContainer > div > button {
+  z-index: 2;
+}
+.reviews .reviewsContainer > div > button svg {
+  color: var(--c-neutral-50);
+}
+/* End Reviews */
